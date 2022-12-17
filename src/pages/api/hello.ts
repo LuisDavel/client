@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     idade: 12,
     sexo: 'Macho',
     raca: 'Shih Tzu',
-    img: '../image/r.jpeg',
+    img: './static/R.jpeg',
     endereco: 'Rua José Bonifácio nº70 APT 505',
     telefone: '+55 (48) 99844-7068',
     temperamento: 'Manso',
