@@ -9,12 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <Head>
         <title>BoilerPlate</title>
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-          integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-          crossOrigin=""
-        />
+
         <meta
           name="description"
           content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"

@@ -3,7 +3,7 @@ import Button from 'components/Button';
 
 export type HeadProfileProps = {
   name?: string;
-  idade?: string;
+  idade?: number;
   sexo?: string;
   raca?: string;
   img?: string;

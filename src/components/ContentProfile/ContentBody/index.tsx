@@ -56,13 +56,17 @@ const ContentBody = ({
       disabled
       value={tamanho}
     />
+    <label htmlFor="">Desrição:</label>
+    <S.TextArea disabled value={descricao}></S.TextArea>
 
-    <S.TextArea disabled>{descricao}</S.TextArea>
+    <label htmlFor="">Mapa para loc:</label>
     <S.MapContent>
       <Map latitude={latitude} longitude={longitude} />
     </S.MapContent>
     <div>
-      <select name="" id=""></select>
+      <select name="" id="">
+        <option value="01"> Exemplo City</option>
+      </select>
     </div>
   </S.Wrapper>
 );
