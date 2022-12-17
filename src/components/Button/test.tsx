@@ -1,15 +1,13 @@
-import { render, screen } from '@testing-library/react';
+// import { render, screen } from '../../utils/test-utils';
 
-import Button from '.';
+// import Button from '.';
 
-describe('<Button />', () => {
-  it('should render the heading', () => {
-    const { container } = render(<Button />);
+// describe('<Button />', () => {
+//   it('should render the medium size by default', () => {
+//     const { container } = render(<Button>Buy now</Button>);
 
-    expect(
-      screen.getByRole('heading', { name: /Button/i })
-    ).toBeInTheDocument();
+//     expect(screen.getByText(/Buy Now/i)).toBeInTheDocument();
 
-    expect(container.firstChild).toMatchSnapshot();
-  });
-});
+//     expect(container.firstChild).toMatchSnapshot();
+//   });
+// });

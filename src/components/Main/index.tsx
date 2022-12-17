@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import * as S from './styles';
 
 const Main = () => (
@@ -12,7 +13,9 @@ const Main = () => (
         <S.Text>* Em desenvolvimento *</S.Text>
       </S.Content>
     </S.Wrapper>
-    <S.Footer>Localize Pet, 2022 🧡</S.Footer>
+    <S.Footer>
+      Localize Pet, 2022 🧡 / <Link href={'./teste'}> Pagina Teste</Link>
+    </S.Footer>
   </>
 );
 
