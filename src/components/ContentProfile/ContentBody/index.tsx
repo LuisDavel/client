@@ -11,7 +11,7 @@ export type BodyProfileProps = {
   descricao?: string;
   latitude?: any;
   longitude?: any;
-  disabled: boolean;
+  disabled?: boolean;
 };
 
 const ContentBody = ({
