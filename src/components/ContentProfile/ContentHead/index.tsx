@@ -13,7 +13,7 @@ const ContentHead = ({ name, idade, sexo, raca, img }: HeadProfileProps) => (
   <S.Wrapper>
     <S.ImagenProfile alt={raca} width={150} height={150} src={img} />
     <S.Profile>
-      <h1>{name}</h1>
+      <S.TittleProfile>{name}</S.TittleProfile>
       <S.TextProfile>
         <p>{idade} anos</p>
         <p>{sexo}</p>

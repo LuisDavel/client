@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { DataProps } from './api/hello';
 import { HeadProfileProps } from 'components/ContentProfile/ContentHead';
 import { BodyProfileProps } from 'components/ContentProfile/ContentBody';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
 // import Main from 'components/Main';
 
 export default function Test() {
@@ -31,6 +33,7 @@ export default function Test() {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude
       };
+
       setPosition(cordinate);
     });
 
@@ -68,3 +71,22 @@ export default function Test() {
     />
   );
 }
+export async function getStaticPaths() {
+  return {
+    paths: [
+      {
+        params: {
+          slug: 'lucky'
+        }
+      }
+    ],
+    fallback: true
+  };
+}
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const router = context.params?.slug;
+  return {
+    props: {}
+  };
+};

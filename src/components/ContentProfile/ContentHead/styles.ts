@@ -8,8 +8,14 @@ export const Wrapper = styled.main`
     display: flex;
 
     ${media.lessThan('small')`
-      font-size: ${theme.font.sizes.xsmall};
+      font-size: ${theme.font.sizes.small};
     `}
+  `}
+`;
+export const TittleProfile = styled.h1`
+  ${({ theme }) => css`
+    text-align: center;
+    font-size: ${theme.font.sizes.xxlarge};
   `}
 `;
 
@@ -34,6 +40,8 @@ export const TextProfile = styled.section`
   ${({ theme }) => css`
     display: flex;
     justify-content: 'space-between';
+    text-align: center;
+    align-items: center;
     gap: ${theme.spacings.xsmall};
   `}
 `;

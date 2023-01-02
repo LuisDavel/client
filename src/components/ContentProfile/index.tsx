@@ -31,6 +31,7 @@ const ContentProfile = ({
       temperamento={bodyProps?.temperamento}
       longitude={longitude}
       latitude={latitude}
+      disabled={true}
     />
   </S.Wrapper>
 );

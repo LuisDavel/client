@@ -11,6 +11,7 @@ export type BodyProfileProps = {
   descricao?: string;
   latitude?: any;
   longitude?: any;
+  disabled: boolean;
 };
 
 const ContentBody = ({
@@ -20,7 +21,8 @@ const ContentBody = ({
   tamanho,
   descricao,
   latitude,
-  longitude
+  longitude,
+  disabled
 }: BodyProfileProps) => (
   <S.Wrapper>
     <TextField
@@ -28,7 +30,7 @@ const ContentBody = ({
       icon={<LocationDot />}
       type={'text'}
       name={'endereco'}
-      disabled
+      disabled={disabled}
       value={endereco}
     />
 
@@ -37,7 +39,7 @@ const ContentBody = ({
       icon={<PhoneVolume />}
       type={'text'}
       name={'telefone'}
-      disabled
+      disabled={disabled}
       value={telefone}
     />
 
@@ -45,7 +47,7 @@ const ContentBody = ({
       label="Temperamento"
       type={'text'}
       name={'temperamento'}
-      disabled
+      disabled={disabled}
       value={temperamento}
     />
 
@@ -53,19 +55,22 @@ const ContentBody = ({
       label="Tamanho"
       type={'text'}
       name={'tamanho'}
-      disabled
+      disabled={disabled}
       value={tamanho}
     />
     <label htmlFor="">Desrição:</label>
-    <S.TextArea disabled value={descricao}></S.TextArea>
+    <S.TextArea disabled={disabled} value={descricao}></S.TextArea>
 
-    <label htmlFor="">Mapa para loc:</label>
+    <label htmlFor="">Locais proximo que aceitam animais</label>
     <S.MapContent>
       <Map latitude={latitude} longitude={longitude} />
     </S.MapContent>
     <div>
-      <select name="" id="">
-        <option value="01"> Exemplo City</option>
+      <select defaultValue={'1'} name="filiais">
+        <option value="1"> Exemplo City</option>
+        <option value="2"> Exemplo City</option>
+        <option value="3"> Exemplo City</option>
+        <option value="4"> Exemplo City</option>
       </select>
     </div>
   </S.Wrapper>
