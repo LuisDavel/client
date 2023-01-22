@@ -52,6 +52,7 @@ const wrapperModifiers = {
 
 export const Wrapper = styled.button<WrapperProps>`
   ${({ theme, size, fullWidth, minimal, disabled }) => css`
+    margin-top: 1rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;

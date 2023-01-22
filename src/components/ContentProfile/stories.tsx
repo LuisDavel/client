@@ -31,7 +31,7 @@ export const Default: Story<ProfileStoriesProps> = (args) => (
 Default.args = {
   headProps: {
     name: 'Lucky',
-    idade: 12,
+    idade: '12',
     sexo: 'Macho',
     raca: 'Shih Tzu',
     img: '../image/r.jpeg'
@@ -52,7 +52,7 @@ export const Head: Story<HeadProfileProps> = (args) => (
 );
 Head.args = {
   name: 'Lucky',
-  idade: 12,
+  idade: '12',
   sexo: 'Macho',
   raca: 'Shih Tzu',
   img: '../image/r.jpeg'

@@ -3,8 +3,12 @@ import Head from 'next/head';
 import GlobalStyles from 'styles/global';
 import { ThemeProvider } from 'styled-components';
 import theme from 'styles/theme';
+import { SessionProvider } from 'next-auth/react';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps }
+}: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -16,7 +20,9 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <SessionProvider session={session}>
+        <Component {...pageProps} />
+      </SessionProvider>
     </ThemeProvider>
   );
 }

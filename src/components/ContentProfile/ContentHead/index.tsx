@@ -3,7 +3,7 @@ import Button from 'components/Button';
 
 export type HeadProfileProps = {
   name?: string;
-  idade?: number;
+  idade?: string;
   sexo?: string;
   raca?: string;
   img?: string;
@@ -15,7 +15,7 @@ const ContentHead = ({ name, idade, sexo, raca, img }: HeadProfileProps) => (
     <S.Profile>
       <S.TittleProfile>{name}</S.TittleProfile>
       <S.TextProfile>
-        <p>{idade} anos</p>
+        <p>{idade}</p>
         <p>{sexo}</p>
         <p>{raca}</p>
       </S.TextProfile>

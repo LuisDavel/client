@@ -110,6 +110,7 @@ const wrapperModifiers = {
 
 export const Wrapper = styled.div<WrapperProps>`
   ${({ theme, error, disabled }) => css`
+    margin-top: 0.5rem;
     ${error && wrapperModifiers.error(theme)}
     ${disabled && wrapperModifiers.disabled(theme)}
   `}
