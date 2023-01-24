@@ -4,10 +4,10 @@
 generator client {
   provider = "prisma-client-js"
 }
-
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider = "mysql"
+  url = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
 model QrCode {
@@ -44,6 +44,8 @@ model Snap_QrCode {
   dt_create    DateTime @default(now())
   id_Qrcode    String
   fk_id_qrCode QrCode   @relation(fields: [id_Qrcode], references: [hash], onDelete: Cascade)
+
+  @@index([id_Qrcode])
 }
 
 model Animal {
@@ -62,6 +64,7 @@ model Animal {
   fk_id_entity    Entity        @relation(fields: [relation_animal], references: [userGoogle], onDelete: Cascade)
 
   @@map("animals")
+  @@index([relation_animal])
 }
 
 model Account {
@@ -81,6 +84,7 @@ model Account {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
+  @@index([userId])
 }
 
 model Session {
@@ -89,6 +93,8 @@ model Session {
   userId       String
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
 }
 
 model Entity {
